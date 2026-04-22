@@ -26,6 +26,7 @@ public class WeatherSummary {
         
         while (console.hasNextDouble()) {
             double temperature = console.nextDouble();
+            console.nextLine();
         }
 
         Collections.sort(temperatures);
