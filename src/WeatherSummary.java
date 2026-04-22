@@ -1,6 +1,10 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
 public class WeatherSummary {
     /**
-     * Reads newline-delimted temperatures from System.in and prints summary
+     * Reads newline-delimited temperatures from System.in and prints summary
      * statistics to System.out.
      * 
      * Example input:
@@ -16,7 +20,23 @@ public class WeatherSummary {
      * @param args command line arguments (ignored)
      */
     public static void main(String[] args) {
-        // Implement this method!
-        // Hint: use Scanner. nextDouble() and hasNextDouble() will be helpful here!
+        Scanner console = new Scanner(System.in);
+        
+        ArrayList<Double> temperatures = new ArrayList<>();
+        
+        while (console.hasNextDouble()) {
+            double temperature = console.nextDouble();
+        }
+
+        Collections.sort(temperatures);
+        double min = temperatures.getFirst();
+        double max = temperatures.getLast();
+        double sum = 0.0;
+
+        for (double t : temperatures) {
+            sum += t;
+        }
+
+        double average = sum / temperatures.size();
     }
 }
