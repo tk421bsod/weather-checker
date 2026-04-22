@@ -27,7 +27,6 @@ public class WeatherSummary {
         while (console.hasNextDouble()) {
             double temperature = console.nextDouble();
             temperatures.add(temperature);
-            console.nextLine();
         }
 
         Collections.sort(temperatures);
@@ -41,5 +40,8 @@ public class WeatherSummary {
 
         double average = sum / temperatures.size();
 
+        System.out.println("Max: " + max);
+        System.out.println("Min: " + min);
+        System.out.println("Average: " + average);
     }
 }
